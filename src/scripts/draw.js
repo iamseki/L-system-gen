@@ -1,7 +1,7 @@
 // DRAWING STUFF:
 let x, y; // the current position of the realtime drawing
 let currentangle = 0; // which way the realtime drawing is pointing
-let step = 7; // how much the line moves with each 'F'
+let step = 6; // how much the line moves with each 'F'
 //let angle = 25; // how much the turtle turns with a '-' or '
 let angle = 22.5;
 let isTimeToDraw = false;
@@ -19,9 +19,11 @@ rules.set('F', 'FF+[+F-F-F]-[-F+F+F]');
 
 let whereinstring = 0; // where in the L-system are we?
 
+
 // first thing that p5js do before starts draw() function
 function setup() {
-  cnv = createCanvas(1000, 840);
+  const parentDiv = document.getElementById('container').getBoundingClientRect()
+  cnv = createCanvas(parentDiv.width, parentDiv.height);
   cnv.parent('container');
   cnv.background(255);
 

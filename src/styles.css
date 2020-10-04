@@ -9,7 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   background: #312e38;
   color: #fff;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +22,7 @@ body div#container {
   align-items: center;
   border-radius: 17px;
   width: 80vw;
-  height: 90vh;
+  height: 80vh;
   background: #fff;
   margin: 7px;
 }
