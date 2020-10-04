@@ -44,25 +44,6 @@ function setup() {
   // translate(width / 2, height);
 }
 
-function lindenmayer(s) {
-  let outputstring = ''; // start a blank output string
-
-  // iterate through 'therules' looking for symbol matches:
-  for (let word of s) {
-    let ismatch = 0; // by default, no match
-    for (let [axiom, rule] of rules.entries()) {
-      if (word == axiom) {
-        outputstring += rule; // write substitution
-        ismatch = 1; // we have a match, so don't copy over symbol
-        break; // get outta this for() loop
-      }
-      // if nothing matches, just copy the symbol over.
-      if (ismatch == 0) outputstring += word;
-    }
-  }
-  return outputstring; // send out the modified string
-}
-
 function draw() {
   if (isTimeToDraw) {
     drawRealTime(thestring[whereinstring]);
