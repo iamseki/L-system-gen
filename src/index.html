@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./libs/p5.min.js"></script>
+    <script src="./javascript/draw.js"></script>
+    <script src="./javascript/scripts.js"></script>
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./p5.min.js"></script>
-  <title>Document</title>
-</head>
-
-<body>
-  <div id='container'></div>
-  <script src="index.js"></script>
-</body>
-
+  <body>
+    <em>
+      <small>Iterations:<b>5</b></small>
+      <small>Rules:</small> F &#8618; FF+[+F-F-F]-[-F+F+F]
+    </em>
+    <header id="selectBox">
+      <button onclick="handleTreeBtn()">Tree</button>
+      <button onclick="handleRealTimeBtn()">Real Time</button>
+      <p>Angle:</p>
+      <small id="angleSmallTag"><b>&nbsp22.5</b></small>
+      <input
+        type="range"
+        min="1"
+        max="100"
+        value="22.5"
+        class="slider"
+        id="angle"
+        onclick="handleChangeSlide()"
+      />
+      <button onclick="handleSavePNGBtn()">Save PNG</button>
+    </header>
+    <div id="container"></div>
+  </body>
 </html>
