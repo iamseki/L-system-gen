@@ -36,7 +36,6 @@ function setup() {
   // COMPUTE THE L-SYSTEM
   for (let i = 0; i < generations; i++) {
     thestring = lindenmayer(thestring);
-    console.log(angle);
   }
   console.log(thestring);
   console.log(thestring.length);
@@ -54,7 +53,7 @@ function draw() {
     whereinstring++;
     if (whereinstring > thestring.length - 1) {
       whereinstring = 0;
-      console.log('Real time chegou ao fim');
+      // console.log('Real time chegou ao fim');
       noLoop();
     }
   }
@@ -116,10 +115,8 @@ function drawRealTime(k) {
     y = y1;
   } else if (k == '+') {
     currentangle += angle; // turn left
-    console.log(currentangle);
   } else if (k == '-') {
     currentangle -= angle; // turn right
-    console.log(currentangle);
   }
 
   // give me some random color values:
